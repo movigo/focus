@@ -1,0 +1,99 @@
+/* General style */
+
+html {
+    display: flex;
+    justify-content: center;
+}
+
+html > body {
+    width: 1000px;
+    margin: 0;
+}
+
+html body a {
+    color: #294056;
+}
+
+div, h1, h2, h3, h4, h5, h6, p, a, li {
+    font-family: raleway, sans-serif;
+    color: #333333;
+}
+
+/* Github corner icon */
+
+.github-corner:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+}
+
+.github-corner svg {
+    fill: #343434;
+    color: white;
+    position: absolute;
+    top: 0;
+    border: 0;
+    right: 0;
+}
+
+@keyframes octocat-wave {
+    0%,
+    100% {
+        transform: rotate(0);
+    }
+    20%,
+    60% {
+        transform: rotate(-25deg);
+    }
+    40%,
+    80% {
+        transform: rotate(10deg);
+    }
+}
+
+@media (max-width: 500px) {
+    .github-corner:hover .octo-arm {
+        animation: none;
+    }
+
+    .github-corner .octo-arm {
+        animation: octocat-wave 560ms ease-in-out;
+    }
+}
+
+/* Animation style */
+
+#animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 700px;
+}
+
+#animation > h2 {
+    color: #526878;
+}
+
+#animation > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid lightgray;
+    width: 270px;
+    height: 220px;
+    padding: 10px;
+}
+
+#animation img {
+    margin: 5px;
+    width: 120px;
+    height: 90px;
+}
+
+/* Footer style */
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    border-top: 2px solid #586c7f;
+}

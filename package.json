@@ -1,0 +1,46 @@
+{
+  "name": "@movigo/focus",
+  "version": "0.1.0",
+  "description": "Movigo plugin to create focus animations.",
+  "author": {
+    "name": "Omar Desogus",
+    "email": "me@cedoor.dev",
+    "url": "https://cedoor.dev"
+  },
+  "license": "MIT",
+  "main": "dist/movigo-focus.js",
+  "unpkg": "dist/movigo-focus.min.js",
+  "jsdelivr": "dist/movigo-focus.min.js",
+  "module": "src/index.js",
+  "scripts": {
+    "start": "npm test && live-server",
+    "pretest": "rollup -c",
+    "test": "tape 'test/**/*.js' | tap-spec",
+    "prepublishOnly": "rm -rf dist && npm run test"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://github.com/movigo/focus#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/movigo/focus.git"
+  },
+  "bugs": {
+    "url": "https://github.com/movigo/focus/issues"
+  },
+  "dependencies": {
+    "@movigo/core": "0.6.0"
+  },
+  "devDependencies": {
+    "jsdom": "16.2.2",
+    "live-server": "1.2.1",
+    "rollup": "2.3.4",
+    "rollup-plugin-commonjs": "10.1.0",
+    "rollup-plugin-node-resolve": "5.2.0",
+    "rollup-plugin-terser": "5.3.0",
+    "standard": "14.3.3",
+    "tap-spec": "5.0.0",
+    "tape": "4.13.2"
+  }
+}
