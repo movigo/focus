@@ -32,14 +32,14 @@ function focus (elements, parameters, options) {
 
   for (let i = 0; i < elements.length; i++) {
     if (i === options.element) {
-      elements[i].style.zIndex = '2'
+      elements[i].style.zIndex = '3'
       parameters.to.push({
         transform: `scale(${options.scale.join(',')})`,
         filter: 'brightness(100%)',
         opacity: 1
       })
     } else {
-      elements[i].style.zIndex = '1'
+      elements[i].style.zIndex = elements[i].style.zIndex === '3' ? '2' : '1'
 
       parameters.to.push({
         transform: 'scale(1, 1)',
