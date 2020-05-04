@@ -1,6 +1,6 @@
 {
   "name": "@movigo/focus",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Movigo plugin to create focus animations.",
   "author": {
     "name": "Omar Desogus",
