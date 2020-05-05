@@ -4,7 +4,6 @@ import { addPlugin } from '@movigo/core'
  * Prepare animation parameters to create a focus animation.
  * @param {Element[] | NodeList} elements
  * @param {object} parameters
- * @param {Element} focusElementIndex
  * @param {object} options
  */
 function focus (elements, parameters, options) {
@@ -12,11 +11,13 @@ function focus (elements, parameters, options) {
     element: -1,
     scale: [2, 2],
     backdropBrightness: 60,
+    duration: .3,
+    easing: 'cubic-bezier(0.34, 1.56, 0.64, 1)',
     ...options
   }
 
-  parameters.duration = .3
-  parameters.easing = 'cubic-bezier(0.34, 1.56, 0.64, 1)'
+  parameters.duration = options.duration
+  parameters.easing = options.easing
 
   if (!elements[options.element]) {
     parameters.to = {
