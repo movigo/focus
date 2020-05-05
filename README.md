@@ -31,11 +31,11 @@ ________________________________
 - :telephone_receiver: [Contacts](#telephone_receiver-contacts)
   - :boy: [Developers](#boy-developers)
 
-## :hammer: Install
+## Install
 
-### npm
+### NPM
 
-You can install movigo focus plugin with npm:
+You can install Movigo focus plugin with NPM:
 
 ```bash
 npm install @movigo/focus --save
@@ -43,27 +43,34 @@ npm install @movigo/focus --save
     
 ### CDN
 
-You can also load it using a \<script> using the unpkg CDN:
+You can also load it with CDNs:
     
 ```html
-<script src="https://unpkg.com/@movigo/core"></script> <!-- Required dependency -->
-<script src="https://unpkg.com/@movigo/focus"></script>
+  <script src="https://unpkg.com/@movigo/core"></script> <!-- Required dependency -->
+  <script src="https://unpkg.com/@movigo/focus"></script>
 ```
 
-## :video_game: Usage
+## Usage
 
-Focus plugin create a `focus` function in the Movigo function chaining.
-You must select the elements with `target` function and call `focus` function with the optional `options` parameter.
+Focus plugin allows you to create animations to focus
+particular elements by scaling an element and obscuring the
+other background elements.
+
+It is necessary to select the element to focus, and it is possible to
+define the size of the scaling, the brightness of the background elements, the
+duration and the easing function of the animation.
 
 ```js
-const target = movigo.target('img')
+  const images = document.querySelectorAll('img')
 
-target.focus({
-    element: 1, // Index of element to focus (default: -1 -> no focused elements)
+  movigo.target(images).focus({
+    element: 1, // Index of the element to focus (default: -1 -> no focused elements)
     scale: [1.5, 1.5], // Dimensions to scale focused element (default: [2, 2]) 
-    backdropBrightness: 80 // Backdrop element brightness in % (default: 60)
-}).animate()
-```
+    backdropBrightness: 80, // Backdrop element brightness in % (default: 60)
+    duration: .5, // Animation duration (default: .3)
+    easing: 'linear', // Easing function (default: cubic-bezier(0.34, 1.56, 0.64, 1))
+  }).animate()
+``` 
 
 ## :chart_with_upwards_trend: Development
 
